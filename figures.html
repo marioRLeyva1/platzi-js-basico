@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500;700&display=swap" rel="stylesheet">
+    <title>Figuras Geométricas | Curso Platzi</title>
+
+    <style>
+        :root{
+            --sm:12px;
+            --md:16px;
+            --lg:24px;
+            --bakcgound: #F5DEB3;
+            --title: #66CDAA;
+            --text: #9370db;
+            --borderHover: #3CB371;
+            --border: #98FB98;
+            --background-divs: #FFEFD5;
+        }
+        body{
+            font-family: Quicksand;
+            background-color: var(--bakcgound);
+            
+        }
+        .main-container{
+            width: auto;
+            height: auto;
+            display: flex;
+            justify-content: center;
+            padding: 24px;        
+        }
+        .container{
+            width: 450px;
+            width: 450px;
+            height: 100%;
+            border: 2px solid var(--border);
+            margin-right: 24px;
+            padding: 24px;  
+            border-radius: 12px;
+            background-color: var(--background-divs);
+        }
+        .square-container .square-input{
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            justify-content: center;
+            gap: 12px;
+            margin-top: 40px;
+        }
+        #square-side{
+            width: 220px;
+            align-self: center;
+        }
+        #square-side{
+            width: 220px;
+            align-self: center;
+        }
+        .square-input .square-button{
+            width: 230px;
+            align-self: center;
+        }
+        .triangle-container .triangle-input{
+            display: grid;
+            grid-template-columns: repeat(2,190px);
+            gap: 12px;
+            justify-content: center;
+            margin-top: 40px;
+        }
+        h1, h2, p{
+            text-align: center;
+        }
+        .primary-button{
+            border-radius: 4px;
+            background-color: var(--border);
+            padding: 8px;
+            font-weight: bold;
+        }
+        .primary-button:hover{
+            border-color: var(--borderHover);
+            cursor: pointer;
+        }
+        .container:hover{
+            box-shadow: 0 1px 1px rgba(0,0,0,0.12), 
+              0 2px 2px rgba(0,0,0,0.12), 
+              0 4px 4px rgba(0,0,0,0.12), 
+              0 8px 8px rgba(0,0,0,0.12),
+              0 16px 16px rgba(0,0,0,0.12);
+              transition: box-shadow 0.3s ease-in-out;
+        }
+        .result{
+            margin-top: 60px;
+        }
+        .primary-input{
+            padding: 8px;
+            border-radius: 8px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Figuras Geométricas</h1>
+    <div class="main-container">
+        <section class="square">
+            <div class="square-container container">
+                <h2>Área y perimetro de un cuadrado</h2>
+                <p>¿Cuánto mide un lado del cuadrado?</p>
+    
+                <form action="" class="square-input">
+                    <input type="number" name="side" id="square-side" class="primary-input" placeholder="Escribe el tamaño del lado">
+                    <input type="submit" value="Calcular" class="primary-button square-button">
+                </form>
+            </div>
+        </section>
+    
+        <section class="triangle">
+            <div class="triangle-container container">
+                <h2>Área y perimetro de un triángulo</h2>
+                <p>¿Cuánto miden los lados del triángulo?</p>
+    
+                <form action="" class="triangle-input">
+                    <input type="number" name="side" id="triangle-base" class="primary-input" placeholder="Tamaño de la base">
+                    <input type="number" name="side" id="triangle-side1" class="primary-input" placeholder="Tamaño del lado izquiero">
+                    <input type="number" name="side" id="triangle-side2" class="primary-input" placeholder="Tamaño del lado derecho">
+                    <input type="submit" value="Calcular" class="primary-button">
+                </form>
+            </div>
+        </section>
+    </div>
+    <div class="result">
+        
+    </div>
+
+    <script src="figures.js"></script>
+</body>
+</html>
