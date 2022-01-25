@@ -91,7 +91,7 @@
               0 16px 16px rgba(0,0,0,0.12);
               transition: box-shadow 0.3s ease-in-out;
         }
-        .result{
+        #result{
             margin-top: 60px;
         }
         .primary-input{
@@ -108,9 +108,9 @@
                 <h2>Área y perimetro de un cuadrado</h2>
                 <p>¿Cuánto mide un lado del cuadrado?</p>
     
-                <form action="" class="square-input">
+                <form class="square-input">
                     <input type="number" name="side" id="square-side" class="primary-input" placeholder="Escribe el tamaño del lado">
-                    <input type="submit" value="Calcular" class="primary-button square-button">
+                    <input type="button" value="Calcular" class="primary-button square-button" id="square">
                 </form>
             </div>
         </section>
@@ -124,13 +124,13 @@
                     <input type="number" name="side" id="triangle-base" class="primary-input" placeholder="Tamaño de la base">
                     <input type="number" name="side" id="triangle-side1" class="primary-input" placeholder="Tamaño del lado izquiero">
                     <input type="number" name="side" id="triangle-side2" class="primary-input" placeholder="Tamaño del lado derecho">
-                    <input type="submit" value="Calcular" class="primary-button">
+                    <input type="button" value="Calcular" class="primary-button" id="triangle">
                 </form>
             </div>
         </section>
     </div>
-    <div class="result">
-        
+    <div class="result-container">
+        <h2 id="result"></h2>
     </div>
 
     <script src="figures.js"></script>

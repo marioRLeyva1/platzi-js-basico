@@ -1,29 +1,32 @@
+//Evento Click
+let clickCuadrado = document.getElementById("square");
+let clickTriangulo = document.getElementById("triangle");
+clickCuadrado.addEventListener("click", cuadrado);
+clickTriangulo.addEventListener("click", triangulo);
+
 //Función Cuadrado
-function areaCuadrado(lado){
-    var area = lado*lado;
-    return area;
+function cuadrado(lado){
+    const input = document.getElementById("square-side");
+    console.log(input.value);
+    if (input.value>0){
+        let area = input.value * input.value;
+        console.log(area);
+        document.getElementById("result").innerHTML = "El resultado es " + area + " cm^2";
+    } else if (input.value == ""){
+        document.getElementById("result").innerHTML = "No se puede calcular, no se ingresó tamaño";
+        console.log("error empty");
+    }else{
+        document.getElementById("result").innerHTML = "No se puede calcular, el tamaño tiene que ser mayor a cero.";
+        console.log("error menor a cero");
+    }
 }
-function perimetroCuadrado(lado){
-    var perimetro = lado * 4;
-    return perimetro;
-}
-
 //Función Triángulo
-function areaTriangulo(base, altura){
-    var area = (base * altura) / 2;
+function triangulo(base, altura){
+    let area = (base * altura) / 2;
     return area;
 }
-function perimetroTriangulo(base, lado1, lado2){
-    var perimetro = base + ladoa + ladob;
-    return perimetro;
-}
-
 //Función Circulo
 function areaCiruculo(radio){
-    var area = (radio * radio) * Math.PI;
+    let area = (radio * radio) * Math.PI;
     return area;
-}
-function perimetroCirculo(diametro){
-    var perimetro = diametro * Math.PI;
-    return perimetro;
 }
